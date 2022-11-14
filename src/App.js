@@ -14,16 +14,18 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-    <main style={{backgroundColor:"black"}}>
-    <div className="container mt-3" >
+    <header>
+
     <nav className="nav">
     {/* <p className="logo"> maXiHood </p> */}
     <NavLink to="/">Home</NavLink>
       <NavLink to="/counter">Counter</NavLink>
       <NavLink to="/counterHook">CounterHook</NavLink>
-      <NavLink to="/testErrorBoundary">Test Error boundary</NavLink>
-      
+      <NavLink to="/testErrorBoundary">Test Error boundary</NavLink> 
     </nav>
+    </header>
+    <main className="container mt-3" style={{backgroundColor:"black"}}>
+    
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/counter" element={<Counter />} />
@@ -33,7 +35,6 @@ function App() {
       </Routes>
       {/* <Counter /> */}
       {/* <Link path='*' element={<NotFound />}></Link> */}
-    </div>
     </main>
     <Footer />
     </>
